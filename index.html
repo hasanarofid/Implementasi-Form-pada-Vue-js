@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Implementasi Form pada vue js</title>
+</head>
+
+<body>
+    <p>TextBox</p>
+    <div id="app">
+        <input type="text" v-model="pesan" placeholder="tulis sesuatu">
+        <br> hasil tulisan anda : <p>{{ pesan }}</p>
+    </div>
+    <hr>
+    <p>TextArea</p>
+    <div id="app2">
+        <textarea v-model="pesan2" placeholder="tulis textarea">
+
+        </textarea>
+        <br> hasil tulisan anda : <p style="white-space : pre-line"> {{ pesan2 }}</p>
+    </div>
+
+    <hr>
+    <p>Radio Button</p>
+    <div id="app3">
+        <input type="radio" id="Pria" v-model="pilih" value="Pria"> Pria <br>
+        <input type="radio" id="Perempuan" v-model="pilih" value="Perempuan"> Perempuan <br>
+        <br> Jenis Kelamin anda : <p style="white-space : pre-line"> {{ pilih }}</p>
+    </div>
+    <hr>
+    <p>Checkboc</p>
+    <p>Pilih Hoby</p>
+    <div id="app4">
+        <input type="checkbox" v-model="ceklist" value="Sepak Bola"> Sepak bola <br>
+        <input type="checkbox" v-model="ceklist" value="Tenis"> Tenis <br>
+        <input type="checkbox" v-model="ceklist" value="Volly"> Volly
+        <p>Hoby Anda : {{ ceklist }}</p>
+    </div>
+    <hr>
+    <p>Dropdwon</p>
+    <div id="app5">
+        <h3>Pilih Kota</h3>
+        <select v-model="kota">
+            <option value="" disabled>Pilih Kota</option>
+            <option>Surabaya</option>
+            <option>jakarta</option>
+            <option>Bandung</option>
+            <option>Semarang</option>
+            <option>Jogja</option>
+        </select>
+        <h3>Kota Anda</h3>
+        {{ kota }}
+    </div>
+
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="apps.js"></script>
+
+</body>
+
+</html>
